@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    
+
+<br>
+
+{{error}}
+
+<form action="/signup/" method="POST">
+
+    <h2> Signup </h2>
+
+    {% csrf_token %}
+
+    <div>
+        <label for="username">Username: </label>
+        <input type="text" name="username" id="username" placeholder="write your username"> 
+    </div>
+
+    <div>
+        <label for="password1">Password: </label>
+        <input type="password" name="password1" id="password1" placeholder="write your password"> 
+    </div>
+
+    <div>
+        <label for="password2">Confirm Password: </label>
+        <input type="password" name="password2" id="password2" placeholder="Confirm your password"> 
+    </div>
+
+
+    <button>
+        signup
+    </button>
+
+
+</form>
+
+{% endblock  %}
+    

@@ -20,6 +20,8 @@ from items import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home),
-    path('signin/', views.signin),
+    path('', views.home, name='home'),
+    path('signin/', views.signin, name='signin'),
+    path('signup/', views.signup, name='signup'),
+    path('veterinaria/', views.veterinaria, name='veterinaria'),
 ]

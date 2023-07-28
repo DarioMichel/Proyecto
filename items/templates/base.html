@@ -14,24 +14,34 @@
     </header>
 
     <nav>
-        <li>
-            <a href="/">home</a>
-        </li>
-            <!-- if User is not authenticate show this -->
-        <li>
-            <a href="/">sing in</a>
-        </li>
-        <li>
-            <a href="/">sing up</a>
-        </li>
-            <!-- If user is authenticate show this  -->
-        <li>
-            <a href="/">sing out</a>
-        </li>
-        <li>
-            <a href="/">pet shop</a>
-        </li>
+        <ul>
+            <li>
+                <a href="/">home</a>
+            </li>
+                <!-- if User is not authenticate show this -->
+            <li>
+                <a href="/signin/">sing in</a>
+            </li>
+            
+                <!-- If user is authenticate show this  -->
+          
+            {% if user.is_authenticated %}
+                <li>
+                    <a href="/logout/">logout</a>
+                </li>
+            {% else %}
+                <li>
+                    <a href="/signup/">sing up</a>
+                </li>
+            {% endif %}
 
+            <li>
+                <a href="/">pet shop</a>
+            </li>
+            
+           
+                
+        </ul>
 
     </nav>
 
