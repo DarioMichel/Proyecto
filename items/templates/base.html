@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinaria</title>
+</head>
+<body>
+
+    <header> 
+        
+        <h1>Welcome to my page pet lovers</h1>
+        
+    </header>
+
+    <nav>
+        <li>
+            <a href="/">home</a>
+        </li>
+            <!-- if User is not authenticate show this -->
+        <li>
+            <a href="/">sing in</a>
+        </li>
+        <li>
+            <a href="/">sing up</a>
+        </li>
+            <!-- If user is authenticate show this  -->
+        <li>
+            <a href="/">sing out</a>
+        </li>
+        <li>
+            <a href="/">pet shop</a>
+        </li>
+
+
+    </nav>
+
+
+
+    {% block content %}
+      
+    {% endblock %}
+    
+</body>
+</html>
